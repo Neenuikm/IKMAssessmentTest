@@ -21,7 +21,7 @@ public class EmployeeController {
 
 
     @PostMapping(value = "/_employee")
-    public ResponseEntity<String> createCitizen(@Valid @RequestBody Employee employee) {
+    public ResponseEntity<String> createEmployee(@Valid @RequestBody Employee employee) {
         if (employee.getName() == null){
             return new ResponseEntity("Name must not be Blank", HttpStatus.BAD_REQUEST);
         }
